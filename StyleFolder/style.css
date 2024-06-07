@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #eeffed;
+    /* position: ; */
+    height: 100vh;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    margin-top: 56px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  
+  .banner{
+    background: url("https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-size:cover;
+    background-color: #04AA6D;
+    background-position:left;
+    margin-left: -15px;
+    width: 100vw;
+    background-repeat: no-repeat;
+    height: 50vh;
+    /* z-index: 10000; */
+    /* color:#04AA6D; */
+  }
+
+  .banner .upper{
+    z-index: 100;
+    background-color: #148ce283;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    top:0;
+    /* opacity:0.3; */
+    color:#eeffed;
+    padding:40px;
+    text-align: center;
+  }
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
